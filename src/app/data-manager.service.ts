@@ -34,7 +34,25 @@ export class DataManagerService {
               color: 'white',
               createdAt: new Date(),
               modifiedAt: new Date(),
-          }
+          },
+          {
+            listId: 0,
+              taskId: 2,
+              text: 'aprender js',
+              completed: false,
+              color: 'white',
+              createdAt: new Date(),
+              modifiedAt: new Date(),
+          },
+          {
+            listId: 0,
+              taskId: 2,
+              text: 'aprender js',
+              completed: false,
+              color: 'white',
+              createdAt: new Date(),
+              modifiedAt: new Date(),
+          },
 
         ],
   
@@ -72,7 +90,7 @@ export class DataManagerService {
         color: 'white',
         createdAt: new Date(),
         modifiedAt: new Date(),
-      },
+      }
     ],
   },
   // ....se termina lista
@@ -87,13 +105,9 @@ export class DataManagerService {
   getTask() {
     return this.data.lists;
   }
-  // addNewList(name: string) {
-  //     console.log("llego"+name);
 
-
-  // }
   addNewList(name: string) {
-    console.log("llego"+name);
+    // este name es el name de abajo
     const now = new Date();
     const newList: List = {
       listId: Date.now(),
@@ -103,7 +117,9 @@ export class DataManagerService {
       tasks: [],
     };
     this.data.lists.push(newList);
-    console.log(this.data.lists);
-   
+  }
+
+  deleteList(id:number){
+    this.data.lists = this.data.lists.filter(list => list.listId !== id)
   }
 }

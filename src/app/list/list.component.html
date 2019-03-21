@@ -1,6 +1,9 @@
 <div class="verdadero">
   <div class="box">
-    <h1>{{ list.name }}</h1>
+    <div class="box_title">
+    <div class="name">{{ list.name }}</div>
+    <i (click)="delete(list.listId)"class="material-icons">clear</i>
+    </div>
     <div class="tasks">
     <app-task *ngFor="let taskObj of list.tasks" [task]="taskObj"></app-task>
   </div>

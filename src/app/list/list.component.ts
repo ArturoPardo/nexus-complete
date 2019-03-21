@@ -11,5 +11,9 @@ export class ListComponent{
   @Input() list: List;
   constructor(private dataService: DataManagerService) { }
 
+  delete(id:number){
+    console.log(id);
+    this.dataService.deleteList(id);
+  }
   
 }
