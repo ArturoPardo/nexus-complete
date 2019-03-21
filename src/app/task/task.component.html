@@ -1,6 +1,10 @@
-<h1>{{ task.text }}</h1>
-<div class="controls">
-  <i class="material-icons">delete</i>
-  <i (click)="edit(editInput)" class="material-icons">edit</i>
-  <i class="material-icons" (click)="siExiste(tarea)">done </i>
+<div class="tasks">
+    <h1>{{ task.text }}</h1>
+    <i class="material-icons">settings</i>
+    <div class="controls">
+      <i class="material-icons">delete</i>
+      <i (click)="edit(editInput)" class="material-icons">edit</i>
+      <i class="material-icons" (click)="siExiste(tarea)">done </i>
+    </div>
 </div>
+

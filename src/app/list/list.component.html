@@ -4,15 +4,8 @@
     <div class="name">{{ list.name }}</div>
     <i (click)="delete(list.listId)"class="material-icons">clear</i>
     </div>
-    <div class="tasks">
+  
     <app-task *ngFor="let taskObj of list.tasks" [task]="taskObj"></app-task>
-  </div>
-    <div class="controls">
-        <i class="material-icons">delete</i>
-        <i (click)="edit(editInput)" class="material-icons">edit</i>
-        <i class="material-icons" (click)="siExiste(tarea)">done </i>
-      </div>
-
- 
-
+  
+  <input type="text" placeholder="add task" (keyup.enter)="newTask($event)" />
 </div>

@@ -21,11 +21,7 @@
   padding: 10px;
   background-color: #92dddf;
 }
-.tasks {
-  border-radius: 10px;
-  padding: 10px;
-  background-color: #f3e074;
-}
+
 .title {
   font-size: 1.7em;
   padding-bottom: 30px;
@@ -50,7 +46,7 @@ h1 {
   color: #000;
 }
 .name {
-  font-size: 1.7em;
+  font-size: 1.4em;
 }
 .box_title {
   display: flex;
@@ -59,4 +55,13 @@ h1 {
 }
 .material-icons {
   line-height: 1.5;
+}
+input{
+  background-color: transparent;
+  border:none;
+  border-bottom:1px solid #000;
+  width: 100%;
+  font-size: 0.9em;
+  margin-top: 15px;
+  padding-bottom:5px; 
 }
