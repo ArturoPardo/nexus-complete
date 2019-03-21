@@ -9,10 +9,17 @@ import { DataManagerService } from '../data-manager.service';
 export class TaskComponent {
   @Input() task: Task;
   
-  editing:boolean =true;
+  completed:boolean =false;
   constructor(private dataService: DataManagerService) { }
 
-  ngOnInit() {
+  siExiste() {
+   
+    this.completed = !this.completed;
+    console.log(this.completed)
   }
+  mostrar(){console.log("hh");
+
+  }
+
 
 }

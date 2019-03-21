@@ -14,5 +14,14 @@ export class AddNewListComponent{
       ev.target.value = '';
     }
   }
+  addListSymbol(text){
+    console.log(text);
+    if (text !== undefined){
+      this.dataService.addNewList(text);
+     
+    }
+  
+   
+  }
 }
 

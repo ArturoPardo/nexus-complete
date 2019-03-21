@@ -140,5 +140,12 @@ export class DataManagerService {
       return listObj;
     });
   }
+  checkedTarea(tarea) {
+    tarea.completada = !tarea.completada;
+   
+  }
+  editListName(list: List) {
+    this.data.lists = this.data.lists.map(listObj => (listObj.listId === list.listId ? list : listObj));
+  }
 
 }

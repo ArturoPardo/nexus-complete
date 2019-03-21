@@ -9,6 +9,8 @@ import { DataManagerService } from '../data-manager.service';
 })
 export class ListComponent{
   @Input() list: List;
+  editing = false;
+  newName: string = '';
   constructor(private dataService: DataManagerService) { }
 
   delete(id:number){
@@ -21,6 +23,28 @@ export class ListComponent{
       this.dataService.addNewTask(text, this.list);
       ev.target.value = '';
     }
+  }
+  addListSymbol(text){
+    if (text !== ''){
+      this.dataService.addNewTask(text,this.list);
+     
+    }
+    text== '';
+   
+  }
+  edit(node) {
+    setTimeout(() => {
+      node.focus();
+    }, 0);
+    this.editing = true;
+  }
+  cancelEdit() {
+    this.editing = false;
+  }
+  editName() {
+    this.list.name = this.newName;
+    this.dataService.editListName(this.list);
+    this.editing = false;
   }
   
 }

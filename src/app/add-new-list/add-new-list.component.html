@@ -1,4 +1,7 @@
 <header>
   <img src="/assets/nexus.png">
-  <input type="text" placeholder=".. Add list"  (keyup.enter)="addList($event)" />
+  <div class="input">
+  <input type="text" placeholder=".. Add list" [(ngModel)]="text" (keyup.enter)="addList($event)" />
+  <i (click)="addListSymbol(text)" class="material-icons">add</i>
+  </div>
 </header>
