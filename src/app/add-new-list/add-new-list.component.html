@@ -1,4 +1,4 @@
 <header>
   <img src="/assets/nexus.png">
-  <input type="text" placeholder=".. Add list" [(ngModel)]="newTareaText" (keyup)="handleKeyup($event)" />
+  <input type="text" placeholder=".. Add list" [(ngModel)]="newTareaText" (keyup.enter)="addList($event)" />
 </header>

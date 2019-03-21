@@ -7,7 +7,6 @@ export interface Task {
     createdAt: Date;
     modifiedAt: Date;
   }
-  
   export interface List {
     listId: number;
     createdAt: Date;
@@ -15,7 +14,6 @@ export interface Task {
     name: string;
     tasks: Array<Task>;
   }
-  
   export interface Data {
     lists: Array<List>;
   }
