@@ -1,19 +1,28 @@
-import { Component, Input } from '@angular/core';
-import { List } from '../models.interface';
-import { DataManagerService } from '../data-manager.service';
+import {
+  Component,
+  Input
+} from '@angular/core';
+import {
+  List
+} from '../models.interface';
+import {
+  DataManagerService
+} from '../data-manager.service';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent{
+export class ListComponent {
   @Input() list: List;
   editing = false;
   newName: string = '';
-  constructor(private dataService: DataManagerService) { }
+  text: string = '';
 
-  delete(id:number){
+  constructor(private dataService: DataManagerService) {}
+
+  delete(id: number) {
     console.log(id);
     this.dataService.deleteList(id);
   }
@@ -22,15 +31,14 @@ export class ListComponent{
     if (text !== '') {
       this.dataService.addNewTask(text, this.list);
       ev.target.value = '';
+      this.text = '';
     }
   }
-  addListSymbol(text){
-    if (text !== ''){
-      this.dataService.addNewTask(text,this.list);
-     
+  addListSymbol(text) {
+    if (text !== '') {
+      this.dataService.addNewTask(text, this.list);
     }
-    text== '';
-   
+    this.text = '';
   }
   edit(node) {
     setTimeout(() => {
@@ -46,5 +54,4 @@ export class ListComponent{
     this.dataService.editListName(this.list);
     this.editing = false;
   }
-  
 }
