@@ -66,7 +66,9 @@ export class DataManagerService {
   getData() {
     return this.data;
   }
- 
+  comparar(a, b) {
+    return b.listId - a.listId;
+  }
 
   addNewList(name: string) {
     // este name es el name de abajo
@@ -78,7 +80,10 @@ export class DataManagerService {
       name,
       tasks: [],
     };
+   
     this.data.lists.push(newList);
+    this.data.lists.sort(this.comparar);
+    console.log(this.data.lists);
   }
 
   deleteList(id: number) {
