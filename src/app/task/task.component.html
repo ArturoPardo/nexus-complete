@@ -1,15 +1,25 @@
 <div class= "{{completed? 'tasks_off' : 'tasks_on'}}">
     <div class="task_title">
+
       <div>
         <i class="material-icons" (click)="siExiste()">   {{completed? "done_all" : "done"}} </i>
     <span class="task_name">{{ task.text }}</span>
   </div>
+
     <i (click)="mostrar()" class="material-icons">settings</i>
     </div>
-    <div class="controls">
-      <i class="material-icons">delete</i>
-      <i (click)="edit(editInput)" class="material-icons">edit</i>
-      <i class="material-icons" (click)="siExiste(tarea)">done </i>
-    </div>
-</div>
 
+  <div class= "{{showMyclass? 'show' : 'hide'}}"> 
+  
+    <ul>
+        <li><i class="material-icons">delete</i></li>
+             <li><i class="material-icons">edit</i></li> 
+     </ul> 
+
+    
+   
+</div> 
+ 
+
+
+</div>

@@ -12,7 +12,6 @@ export class BoardComponent {
   
   constructor(private dataManager: DataManagerService) {
     this.data = this.dataManager.getData();
-    console.log("Data",this.data); 
    
   }
 

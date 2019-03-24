@@ -10,16 +10,18 @@ export class TaskComponent {
   @Input() task: Task;
   
   completed:boolean =false;
+  showMyclass:boolean =false;
+
   constructor(private dataService: DataManagerService) { }
 
   siExiste() {
    
     this.completed = !this.completed;
-    console.log(this.completed)
+    console.log("completada",this.completed)
   }
-  mostrar(){console.log("hh");
-
+  mostrar(){
+   this.showMyclass = !this.showMyclass;
+   console.log("pulsada",this.showMyclass);
   }
-
 
 }

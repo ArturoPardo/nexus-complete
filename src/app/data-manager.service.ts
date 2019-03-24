@@ -83,7 +83,6 @@ export class DataManagerService {
    
     this.data.lists.push(newList);
     this.data.lists.sort(this.comparar);
-    console.log(this.data.lists);
   }
 
   deleteList(id: number) {

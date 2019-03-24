@@ -23,9 +23,39 @@
   .task_title {
     display: flex;
     justify-content: space-between;
+   
+  }
 
+  .hide{
+   
+   height: 0px;
+   transition: 200ms ease all;
+    
+ }
+  .hide ul{
+    display:none;
   }
-  .controls{
-      background-color: red;
-      display:none;
+  
+  
+
+  // .show{
+  //   height: 70px;
+  //   transition: height 400ms;
+   
+  // }
+  
+  
+  .show{
+    height: 70px;
+    transition: 400ms ease all;
+  
   }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+.rotate{
+  transform: rotate(-90deg);
+  transition: 400ms ease all;
+}

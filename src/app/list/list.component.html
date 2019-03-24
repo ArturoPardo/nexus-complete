@@ -2,16 +2,18 @@
   <div class="box">
     <div class="box_title">
       <h1>
-        <span [hidden]="editing" (dblclick)="edit(editInput)">{{ list.name }}</span>
+        <span [hidden]="editing" (click)="edit(editInput)">{{ list.name }}</span>
         <span [hidden]="!editing">
           <input type="text" #editInput (keyup.enter)="editName()" (blur)="cancelEdit()" [(ngModel)]="newName" />
         </span>
       </h1>
-      <i (click)="delete(list.listId)" class="material-icons">clear</i>
+      <span [hidden]="editingRe" > <i (click)="delete(list.listId)" class="material-icons">clear</i></span>
+      <span [hidden]="!editingRe" > <i (click)="addListSymbolRe(newName)" class="material-icons">done</i></span>
+     
     </div>
     <app-task *ngFor="let taskObj of list.tasks" [task]="taskObj"></app-task>
     <div class="box_input">
       <input type="text" placeholder="add task" [(ngModel)]="text" (keyup.enter)="newTask($event)" />
-      <i (click)="addListSymbol(text)" class="material-icons">add</i>
+      <i (click)="addListSymbol(text)"  class="material-icons rotate">add</i>
     </div>
   </div>

@@ -17,6 +17,7 @@ import {
 export class ListComponent {
   @Input() list: List;
   editing = false;
+  editingRe = false;
   newName: string = '';
   text: string = '';
 
@@ -36,22 +37,46 @@ export class ListComponent {
   }
   addListSymbol(text) {
     if (text !== '') {
+     
       this.dataService.addNewTask(text, this.list);
     }
     this.text = '';
+    
   }
   edit(node) {
+   this.editingRe = true;
     setTimeout(() => {
+     
       node.focus();
     }, 0);
     this.editing = true;
+   
   }
   cancelEdit() {
     this.editing = false;
+    setTimeout(() => {
+     
+      this.addListSymbolRe(this.newName);
+    }, 0);
+    
   }
   editName() {
+  
     this.list.name = this.newName;
+   
     this.dataService.editListName(this.list);
     this.editing = false;
+    this.editingRe = false;
+  }
+  addListSymbolRe(newName){
+   
+    if (newName!== ''){
+      
+      this.list.name = newName;
+      
+    }
+
+    this.editingRe = false;
+
   }
 }
