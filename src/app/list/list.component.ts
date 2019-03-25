@@ -69,13 +69,13 @@ export class ListComponent {
     this.editingRe = false;
   }
   addListSymbolRe(newName){
-   
+  
     if (newName!== ''){
       
       this.list.name = newName;
       
     }
-
+   
     this.editingRe = false;
 
   }

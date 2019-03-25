@@ -11,6 +11,7 @@ export class TaskComponent {
   
   completed:boolean =false;
   showMyclass:boolean =false;
+ 
 
   constructor(private dataService: DataManagerService) { }
 
@@ -20,8 +21,12 @@ export class TaskComponent {
     console.log("completada",this.completed)
   }
   mostrar(){
+   
    this.showMyclass = !this.showMyclass;
+  
    console.log("pulsada",this.showMyclass);
+ 
   }
-
+  
+   
 }

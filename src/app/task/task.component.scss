@@ -5,13 +5,13 @@
 .tasks_on {
     border-radius: 10px;
     padding: 10px;
-    background-color: #eaeaea;
+    background-color: #ffea3c;
     margin-bottom: 10px;
   }
   .tasks_off {
     border-radius: 10px;
     padding: 10px;
-    background-color: #eaeaea;
+    background-color: #ffea3c;
     margin-bottom: 10px;
     opacity:0.4 ;
   }
@@ -29,12 +29,14 @@
   .hide{
    
    height: 0px;
+   overflow: hidden;
    transition: 200ms ease all;
     
  }
-  .hide ul{
-    display:none;
-  }
+  // .hide ul{
+  //   opacity: 0;
+     
+  // }
   
   
 
@@ -50,6 +52,13 @@
     transition: 400ms ease all;
   
   }
+.before{
+ opacity:0;
+  }
+  .after{
+    opacity:1;
+    transition: opacity 400ms ease-in-out;
+    }
 
   ul {
     padding-left: 0;

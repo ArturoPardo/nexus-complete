@@ -15,49 +15,7 @@ export class DataManagerService {
     lists: Array < List >
   } = {
 
-    lists: [{
-
-        listId: 0,
-        createdAt: new Date(),
-        modifiedAt: new Date(),
-        name: 'to do',
-        tasks: [{
-            listId: 0,
-            taskId: 0,
-            text: 'aprender angular',
-            completed: false,
-            color: 'white',
-            createdAt: new Date(),
-            modifiedAt: new Date(),
-          },
-          {
-            listId: 0,
-            taskId: 1,
-            text: 'aprender js',
-            completed: false,
-            color: 'white',
-            createdAt: new Date(),
-            modifiedAt: new Date(),
-          }
-        ],
-      },
-      // ----------------------otralista
-      {
-        listId: 1,
-        createdAt: new Date(),
-        modifiedAt: new Date(),
-        name: 'doing',
-        tasks: [{
-          listId: 1,
-          taskId: 0,
-          text: 'aprender typescript',
-          completed: false,
-          color: 'white',
-          createdAt: new Date(),
-          modifiedAt: new Date(),
-        }, ],
-      },
-      // ....se termina lista
+    lists: [
 
     ],
 
