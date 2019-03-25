@@ -16,16 +16,13 @@ export class TaskComponent {
   constructor(private dataService: DataManagerService) { }
 
   siExiste() {
-   
     this.completed = !this.completed;
-    console.log("completada",this.completed)
   }
   mostrar(){
-   
    this.showMyclass = !this.showMyclass;
-  
-   console.log("pulsada",this.showMyclass);
- 
+  }
+  deleteTask() {
+    this.dataService.deleteTask(this.task);
   }
   
    
