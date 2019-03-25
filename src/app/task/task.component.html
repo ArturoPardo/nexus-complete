@@ -2,8 +2,10 @@
     <div class="task_title">
 
       <div>
-        <i class="material-icons" (click)="siExiste()">   {{completed? "done_all" : "done"}} </i>
-    <span class="task_name">{{ task.text }}</span>
+        <i *ngIf="!editingTask" class="material-icons" (click)="siExiste()">   {{completed? "done_all" : "done"}} </i>
+    <span *ngIf="!editingTask" class="task_name" (click)="editStart()">{{ task.text }}</span>
+    <input autofocus *ngIf="editingTask" [(ngModel)]="newTaskText"  type="text" (blur)="cancelEdit()" (keyup.enter)="editTaskText()">
+    <i *ngIf="editingTask" (click)="addTaskSymbolRe(newTaskText)" class="material-icons">done</i>
   </div>
 
     <i (click)="mostrar()" class="material-icons">settings</i>
@@ -12,8 +14,9 @@
   <div class= "{{showMyclass? 'show' : 'hide'}}"> 
     
     <ul class= "{{showMyclass? 'after' : 'before'}}">
+        <li><i (click)="editStart()" class="material-icons">edit</i></li> 
         <li><i (click)="deleteTask()"class="material-icons">delete</i></li>
-             <li><i class="material-icons">edit</i></li> 
+           
      </ul> 
 
     

@@ -11,8 +11,8 @@ export class TaskComponent {
   
   completed:boolean =false;
   showMyclass:boolean =false;
- 
-
+  editingTask = false;
+  newTaskText = '';
   constructor(private dataService: DataManagerService) { }
 
   siExiste() {
@@ -22,8 +22,47 @@ export class TaskComponent {
    this.showMyclass = !this.showMyclass;
   }
   deleteTask() {
-    this.dataService.deleteTask(this.task);
-  }
+    if (confirm('Do you want to delete the task ' + this.task.text )) {
+      this.dataService.deleteTask(this.task);
+    }
   
+  }
+  editStart(){
+    this.editingTask = true;
+  
+  }
+  cancelEdit(){
+    this.editingTask = false;
+    setTimeout(() => {
+     
+      this.addTaskSymbolRe(this.newTaskText);
+    }, 0);
+  }
+  editTaskText() {
    
+    this.task.text = this.newTaskText;
+   this.dataService.editTask(this.task);
+   setTimeout(() => {
+     
+    this.cancelEdit();
+  }, 0);
+    
+  }
+
+  addTaskSymbolRe(newTaskText){
+    
+    if (newTaskText!== ''){
+      this.task.text = newTaskText;
+      this.dataService.editTask(this.task);
+      
+    }
+   
+    this.editingTask = false;
+
+  }
+
+
+  
+
+
 }

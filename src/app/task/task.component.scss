@@ -64,7 +64,22 @@
     padding-left: 0;
     list-style-type: none;
 }
+li{
+  display:flex;
+  justify-content: flex-end;
+}
 .rotate{
   transform: rotate(-90deg);
   transition: 400ms ease all;
+}
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 190px;
+  font-size: 0.9em;
+  padding: 5px;
+}
+input:focus {
+  outline: 0;
 }
