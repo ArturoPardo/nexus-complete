@@ -22,11 +22,20 @@ export class TaskComponent {
    this.showMyclass = !this.showMyclass;
   }
   deleteTask() {
+    this.editingTask = false;
+    setTimeout(() => {
+     
+      this.deleteTaskSure();
+    }, 0);
+  }
+  
+  
+  deleteTaskSure() {
     if (confirm('Do you want to delete the task ' + this.task.text )) {
       this.dataService.deleteTask(this.task);
     }
-  
   }
+
   editStart(){
     this.editingTask = true;
   
