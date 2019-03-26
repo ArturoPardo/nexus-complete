@@ -1,85 +1,92 @@
-.task_name{
-    font-size: 0.9em;
-    margin:0px 0px 10px 10px;
+.task_name {
+  font-size: 0.8em;
+  margin: 0px 0px 10px 10px;
+  vertical-align: text-top;
 }
+
 .tasks_on {
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #ffea3c;
-    margin-bottom: 10px;
-  }
-  .tasks_off {
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #ffea3c;
-    margin-bottom: 10px;
-    opacity:0.4 ;
-  }
-  .material-icons {
-    font-size: 1.2rem;
- 
-    line-height: 1.5;
-  }
-  .task_title {
-    display: flex;
-    justify-content: space-between;
-   
-  }
-
-  .hide{
-   
-   height: 0px;
-   overflow: hidden;
-   transition: 200ms ease all;
-    
- }
-  // .hide ul{
-  //   opacity: 0;
-     
-  // }
-  
-  
-
-  // .show{
-  //   height: 70px;
-  //   transition: height 400ms;
-   
-  // }
-  
-  
-  .show{
-    height: 70px;
-    transition: 400ms ease all;
-  
-  }
-.before{
- opacity:0;
-  }
-  .after{
-    opacity:1;
-    transition: opacity 400ms ease-in-out;
-    }
-
-  ul {
-    padding-left: 0;
-    list-style-type: none;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffea3c;
+  margin-bottom: 10px;
 }
-li{
-  display:flex;
+
+.tasks_off {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffea3c;
+  margin-bottom: 10px;
+  opacity: 0.4;
+}
+
+.material-icons {
+  font-size: 1.2rem;
+
+  line-height: 1.5;
+}
+
+.task_title {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.hide {
+
+  height: 0px;
+  overflow: hidden;
+  transition: 200ms ease all;
+
+}
+
+// .hide ul{
+//   opacity: 0;    
+// }
+// .show{
+//   height: 70px;
+//   transition: height 400ms; 
+// }
+
+
+.show {
+  height: 65px;
+  transition: 400ms ease all;
+
+}
+
+.before {
+  opacity: 0;
+}
+
+.after {
+  opacity: 1;
+  transition: opacity 400ms ease-in-out;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
   justify-content: flex-end;
 }
-.rotate{
+
+.rotate {
   transform: rotate(-90deg);
   transition: 400ms ease all;
 }
+
 input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #000;
   width: 190px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   padding: 5px;
 }
+
 input:focus {
   outline: 0;
 }
