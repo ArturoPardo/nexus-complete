@@ -1,17 +1,23 @@
+# Nexus: Scrum Board with Angular
 
-Nexus: Scrum Board with Angular version 7.3.2.
-App web con Angular para gestionar la metodología scrum. Consiste en un gestor de listas con sus correspondientes tareas.
+## Realización
+Este proyecto fue realizado en el Bootcamp del 2019 llevado a cabo por Geekshubs.
 
-Features:
+## Demo
+Puedes acceder a la demo del proyecto mediante este enlace:
+* [https://arturopardo.github.io/nexus-complete]
 
-Función de añadir listas nuevas
-Función de borrar listas
-Función de añadir tareas a las listas
-Función de borrar tareas
-Función de marcar tarea como completada
-Función de editar texto de la tarea
-Integración de servicio para componentes
+## Función
+Nexus es un ToDo List que te permite crear listas y, en ellas, crear tareas simulando un tablero Kanban online.
 
-Demo
+## Usos
+El usuario puede:
+* Registrarse.
+* Iniciar sesión con un usuario creado.
+* Crear, modificar nombre y borrar listas.
+* Crear, modificar nombre y borrar tareas.
 
-App accesible online en https://arturopardo.github.io/nexus-complete/
+## Usos futuros
+Debido a una API cerrada, no permiten una persistencia a los cambios, pero están implementados para usarlos en cuanto se pueda:
+* El usuario y contraseña se almacenan en una Api Rest externa.
+* Las listas y tereas de momento de no se almacenan.
