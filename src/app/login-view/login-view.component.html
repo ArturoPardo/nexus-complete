@@ -1,3 +1,22 @@
-<p>
-  login-view works!
-</p>
+<div class="center">
+    <img src="/assets/nexus.png">
+    <app-navbar></app-navbar>
+  <form (submit)="login()">
+    <div class="input_group">
+        <i class="material-icons">
+            account_circle
+            </i>
+      <input type="text" class="input" placeholder="username" [(ngModel)]="username" name="username" />
+    </div>
+    <div class="input_group">
+        <i class="material-icons">
+            verified_user
+            </i>
+            <input type="text" class="input" placeholder="password" [(ngModel)]="password" name="password" /> 
+          </div>
+            <input type="submit" class="button"
+            value="login" />
+    
+    <div *ngIf="error">{{ error | json }}</div>
+  </form>
+</div>
