@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BoardComponent } from './board/board.component';
 import { LoginViewComponent } from './login-view/login-view.component';
 import { AddNewListComponent } from './add-new-list/add-new-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddNewListComponent } from './add-new-list/add-new-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,7 @@
   margin-left: -105px;
   background-color: #8ac149;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: 20px;
   text-align: center;
 }
 
@@ -38,6 +38,33 @@
   margin-bottom: 10px;
   border: none;
   width: 100%;
+}
+
+.buttonGo {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffea3c;
+
+  border: none;
+}
+
+.registerGroup {
+
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2px;
+}
+
+p {
+  font-size: 0.8em;
+  margin-right: 10px;
+
+}
+
+.error {
+  font-size: 0.8em;
+  color: #ffea3c;
+  margin-bottom: 2px;
 }
 
 input:focus,
