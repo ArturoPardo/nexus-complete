@@ -6,22 +6,22 @@ import { RegisterViewComponent } from './register-view/register-view.component';
 
 const routes: Routes = [
   {
-    path: 'board',
+    path: '',
     component: BoardComponent,
   },
-  {
-    path: 'login',
-    component: LoginViewComponent,
-  },
-  {
-    path: 'register',
-    component: RegisterViewComponent,
-  },
-  {
-    path: '**',
-    redirectTo: 'board',
-    pathMatch: 'full',
-  },
+  // {
+  //   path: 'login',
+  //   component: LoginViewComponent,
+  // },
+  // {
+  //   path: 'register',
+  //   component: RegisterViewComponent,
+  // },
+  // {
+  //   path: '**',
+  //   redirectTo: 'board',
+  //   pathMatch: 'full',
+  // },
 ];
 
 @NgModule({
