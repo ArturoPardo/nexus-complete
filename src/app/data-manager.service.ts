@@ -10,6 +10,7 @@ import {
   providedIn: 'root'
 })
 export class DataManagerService {
+  username: string;
   constructor() {}
   data: {
     lists: Array < List >
@@ -18,13 +19,13 @@ export class DataManagerService {
     lists: [
       {
    
-        listId: 0,
+        listId: 3,
         createdAt: new Date(),
         modifiedAt: new Date(),
         name: 'It´s a definite maybe (seeking feedback)',
         tasks: [
           {
-            listId: 0,
+            listId: 3,
             taskId: 0,
             text: 'Integration with Rocketlink',
             completed: false,
@@ -33,7 +34,7 @@ export class DataManagerService {
             modifiedAt: new Date(),
           },
           {
-            listId: 0,
+            listId: 3,
               taskId: 1,
               text: 'Unified Inbox (for comments and replies)',
               completed: false,
@@ -42,7 +43,7 @@ export class DataManagerService {
               modifiedAt: new Date(),
           },
           {
-            listId: 0,
+            listId: 3,
               taskId: 2,
               text: 'All & Dynamic Scheduling',
               completed: false,
@@ -51,7 +52,7 @@ export class DataManagerService {
               modifiedAt: new Date(),
           },
           {
-            listId: 0,
+            listId: 3,
               taskId: 3,
               text: 'Monitor feeds (list of accounts, hashtag, etc)=Streams',
               completed: false,
@@ -60,7 +61,7 @@ export class DataManagerService {
               modifiedAt: new Date(),
           },
           {
-            listId: 0,
+            listId: 3,
               taskId: 4,
               text: 'White Labeling',
               completed: false,
@@ -77,13 +78,13 @@ export class DataManagerService {
   
   
   {
-    listId: 1,
+    listId: 2,
     createdAt: new Date(),
     modifiedAt: new Date(),
     name: 'Next Up',
     tasks: [
       {
-        listId: 1,
+        listId: 2,
         taskId: 0,
         text: 'Include an Affiliate program',
         completed: false,
@@ -92,7 +93,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 1,
+        listId: 2,
         taskId: 1,
         text: 'Instagram Grow + Engage',
         completed: false,
@@ -101,7 +102,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 1,
+        listId: 2,
         taskId: 2,
         text: 'Improve the mobile app',
         completed: false,
@@ -110,7 +111,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 1,
+        listId: 2,
         taskId: 3,
         text: 'Wordpress /Shopify/ Other integration with Social Bee',
         completed: false,
@@ -121,13 +122,13 @@ export class DataManagerService {
     ],
   },
   {
-    listId: 2,
+    listId: 1,
     createdAt: new Date(),
     modifiedAt: new Date(),
     name: 'In Progress',
     tasks: [
       {
-        listId: 2,
+        listId: 1,
         taskId: 0,
         text: 'Browser extension',
         completed: false,
@@ -136,7 +137,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 2,
+        listId: 1,
         taskId: 1,
         text: 'Mobile App for Instagram Posting',
         completed: false,
@@ -145,7 +146,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 2,
+        listId: 1,
         taskId: 2,
         text: 'Various UX Improvements',
         completed: false,
@@ -154,7 +155,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 2,
+        listId: 1,
         taskId: 3,
         text: 'Content Analytics',
         completed: false,
@@ -163,7 +164,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 2,
+        listId: 1,
         taskId: 4,
         text: 'Twitter Rules on Automation changes',
         completed: false,
@@ -172,7 +173,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 2,
+        listId: 1,
         taskId: 5,
         text: 'Complete Social Platform Variants',
         completed: false,
@@ -181,7 +182,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 2,
+        listId: 1,
         taskId: 6,
         text: 'Pinterest Support',
         completed: false,
@@ -193,13 +194,13 @@ export class DataManagerService {
     ],
   },
   {
-    listId: 3,
+    listId: 0,
     createdAt: new Date(),
     modifiedAt: new Date(),
     name: 'Done',
     tasks: [
       {
-        listId: 3,
+        listId: 0,
         taskId: 0,
         text: 'Add /Add & Share Now',
         completed: false,
@@ -208,7 +209,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 3,
+        listId: 0,
         taskId: 1,
         text: 'Zapier app',
         completed: false,
@@ -217,7 +218,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 3,
+        listId: 0,
         taskId: 2,
         text: 'Google+ Native posting',
         completed: false,
@@ -226,7 +227,7 @@ export class DataManagerService {
         modifiedAt: new Date(),
       },
       {
-        listId: 3,
+        listId: 0,
         taskId: 3,
         text: 'Bulk upload images',
         completed: false,
@@ -236,7 +237,7 @@ export class DataManagerService {
       },
       
       {
-        listId: 3,
+        listId: 0,
         taskId: 4,
         text: 'PixelMe integration (for URL shortener',
         completed: false,
@@ -252,8 +253,16 @@ export class DataManagerService {
     ],
 
   };
+  getUser(usuario:string){
+    this.username=usuario;
+  }
+  getUser2(){
+    return this.username;
+  }
 
   getData() {
+    
+    this.data.lists.sort(this.comparar);
     return this.data;
   }
   comparar(a, b) {
@@ -272,7 +281,7 @@ export class DataManagerService {
     };
    
     this.data.lists.push(newList);
-    this.data.lists.sort(this.comparar);
+  this.data.lists.sort(this.comparar);
   }
 
   deleteList(id: number) {
@@ -324,4 +333,5 @@ export class DataManagerService {
       return list;
     });
   }
+  
 }

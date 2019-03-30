@@ -7,8 +7,12 @@ import { DataManagerService } from '../data-manager.service';
 })
 export class AddNewListComponent{
  text:string = '';
+ username:string;
 
-  constructor(private dataService: DataManagerService) { }
+  constructor(private dataService: DataManagerService) {
+    this.username = this.dataService.getUser2();
+   
+   }
   addList(ev) {
     if (ev.target.value.trim() !== '') {
       this.dataService.addNewList(ev.target.value.trim());
@@ -21,9 +25,7 @@ export class AddNewListComponent{
     if (text !== ''){
       this.dataService.addNewList(text);
       this.text='';
-    }
-    
+    }  
   }
-
 }
 

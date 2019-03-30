@@ -13,6 +13,7 @@ import { LoginViewComponent } from './login-view/login-view.component';
 import { AddNewListComponent } from './add-new-list/add-new-list.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     BoardComponent,
     LoginViewComponent,
-    AddNewListComponent
+    AddNewListComponent,
+ 
   ],
   imports: [
     BrowserModule,

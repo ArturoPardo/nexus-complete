@@ -24,7 +24,10 @@ export class RegisterViewComponent{
         .catch(error => {
           this.error = error;
         });
+        this.username= '';
+        this.password= '';
     }
+
   }
 
 }

@@ -9,10 +9,9 @@ import { Data } from '../models.interface';
 })
 export class BoardComponent {
   data: Data;
-  
   constructor(private dataManager: DataManagerService) {
-    this.data = this.dataManager.getData();
-   
+  this.data = this.dataManager.getData();
+  
   }
 
 }

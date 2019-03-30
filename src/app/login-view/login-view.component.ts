@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { ApiService } from '../api.service';
+import { DataManagerService } from '../data-manager.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-view',
@@ -10,7 +11,7 @@ export class LoginViewComponent{
   username: string;
   password: string;
   error: any;
-  constructor(private api: ApiService, private router: Router) {}
+  constructor(private dataService: DataManagerService, private api: ApiService, private router: Router) {}
 
   login() {
     const { username, password } = this;
@@ -19,11 +20,18 @@ export class LoginViewComponent{
         .login(username.trim(), password.trim())
         .then(() => {
           this.error = undefined;
+          this.dataService.getUser(username.trim());
           this.router.navigate(['/board']);
+          
         })
         .catch(error => {
           this.error = error;
         });
+        this.username= '';
+        this.password= '';
     }
   }
+ 
+      
+ 
 }
